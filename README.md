@@ -17,3 +17,30 @@ console.log(2011);
 console.log('Woohoo! I love to code! #codecademy');
 console.log(20.49);
 ```
+
+In terms of *Arithmetic operators*, JS works with built-in operators that allow us to performe mathematical calculations on numbers. We can use this operators within the *console.log()* function
+
+```javascript
+console.log(3 + 4); // Prints 7
+console.log(5 - 1); // Prints 4
+console.log(4 * 2); // Prints 8
+console.log(9 / 3); // Prints 3
+```
+
+We can also concatenate strings within the *console.log()* function. Let's see an example:
+
+```javascript
+console.log('Hello'+'World');
+console.log('Hello'+' World');
+```
+Every string instance has a property called *length* that stores the number of characters in that string. We can retrieve this information by appending the string with a period. 
+```javascript
+console.log('Teaching the world how to code'.length);
+```
+
+we can do the same using others built-in functions. In the following example we show new keywords.
+
+```javascript
+console.log('MyName'.toUpperCase()); // Use .toUpperCase() to log 'MyName' in all uppercase letters
+console.log('    Remove whitespace   '.trim()); // Remove the whitespaces
+```
