@@ -61,3 +61,11 @@ let changeMe = true;
 changeMe = false;
 console.log(changeMe); // it will print false 
 ```
+Another important keyword is *const*. The main difference between *let* and *const* is that the latter cannot be changed or reassigned. If you try to reassign a *const* variable, you'll get a *TypeError* 
+
+```javascript
+const entree = 'Enchiladas';
+console.log(entree);
+entree = 'Tacos'; // It will show an error
+```
+ 
