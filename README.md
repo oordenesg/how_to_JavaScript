@@ -72,7 +72,14 @@ entree = 'Tacos'; // It will show an error
 We can also concatenate strings using variables. We can use the *+* operator to do this within the *console.log()*. Example: 
 
 ```javascript
+// Option 1
 let favoriteAnimal = 'Dog';
 console.log('My favorite animal: ANIMAL');
 console.log('My favorite animal:' +favoriteAnimal); // it will print 'My favorite animal: Dog'
+
+// Option 2
+let myName ='Oscar';
+let myCity = 'Talcahuano';
+console.log(`My name is ${myName}. My favorite city is ${myCity}.`);
+
 ```
