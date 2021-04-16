@@ -69,3 +69,10 @@ console.log(entree);
 entree = 'Tacos'; // It will show an error
 ```
  
+We can also concatenate strings using variables. We can use the *+* operator to do this within the *console.log()*. Example: 
+
+```javascript
+let favoriteAnimal = 'Dog';
+console.log('My favorite animal: ANIMAL');
+console.log('My favorite animal:' +favoriteAnimal); // it will print 'My favorite animal: Dog'
+```
