@@ -44,3 +44,20 @@ we can do the same using others built-in functions. In the following example we 
 console.log('MyName'.toUpperCase()); // Use .toUpperCase() to log 'MyName' in all uppercase letters
 console.log('    Remove whitespace   '.trim()); // Remove the whitespaces
 ```
+
+In JS, we can also stored variables. Here it is important to declare the keyworkd *var* before the name of the variable. In the following example, we stored two variables with different data types. 
+
+```javascript
+var favoriteFood = 'pizza'; // store the string "pizza" to the variable favoriteFood
+var numOfSlices = 8;  //store the number 8 to the variable numOfSlices
+console.log(favoriteFood);
+console.log(numOfSlices);
+```
+
+In ES6, the keyword *let* was introduced. This keywords signals that a variable can be reassigned a different value.  Additionally, we can declare a variable using *let* without assigning a value. In this case, the variable will be automatically initialized with a value of *undefined*. 
+
+```javascript
+let changeMe = true; 
+changeMe = false;
+console.log(changeMe); // it will print false 
+```
