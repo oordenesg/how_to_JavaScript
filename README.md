@@ -83,3 +83,17 @@ let myCity = 'Talcahuano';
 console.log(`My name is ${myName}. My favorite city is ${myCity}.`);
 
 ```
+
+## Exercise
+
+Using a temperature in degrees *Kelvin*, try to convert it and then display the temperature in degrees Fahrenheit and Newton. 
+```javascript
+const kelvin = 293; // variable kelvin is constant
+let celsius = kelvin -273;  //  get the tempeture in celsius
+let fahrenheit = Math.floor(celsius*(9/5)+32); // get the tempeture in fahrenheit
+let newton = Math.floor(celsius*(33/100));
+
+// show the result in the console
+console.log(`The tempeture is ${fahrenheit} degrees Fahrenheit.`);
+console.log(`The tempeture is ${newton} degrees Newton.`);
+``` 
