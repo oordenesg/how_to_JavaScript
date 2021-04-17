@@ -112,3 +112,52 @@ myAgeInDogYears = earlyYears + laterYears;
 myName = 'Oscar'.toLowerCase(); // my name in lower case
 console.log(`My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years`) //create a sentence using the interpolation method.
 ```
+
+# Conditional Statements
+
+In this part we will explore how JS make decisions by evaluating conditions. Given this, we will introduce logic into our code. To do this, we will check the most common logical keywords widely used in programming. 
+
+In programming, we can also perform a task based on a condition using an if statement. In JS, the *if* keyword followed by a set of parentheses *()* which is followed by a code block indicated by curly braces {}. Let's see an example.
+
+```javascript
+let sale = true;
+if (sale){
+  console.log('Time to buy!') // if the condition is True, then show the string 'Time to by!'
+}
+```
+
+If we want to add an *else* statement we just have to add this keyword after the *if* keyword. Take a look at the inclusion of an *else* statement:
+```javascript
+let sale = true
+sale = false;
+if(sale) {
+  console.log('Time to buy!');
+} else{
+  console.log('Time to wait for a sale.')
+}
+```
+In some case when, we need to use different types of operators to compare values. These operators are called *comparison operators* and we can add them to evaluate a condition within the *if* statement.
+```javascript
+let hungerLevel = 7;
+if (hungerLevel > 7){
+  console.log('Time to eat!') // if hungerLevel is greater than 7, so 'Time to eat!'. Otherwise, 'We can eat later!"
+} else{
+  console.log('We can eat later!')
+}
+```
+We can use logical operators to add more sophisticated logit to our conditional functions. In programming, there are three logical operators: 
+- The *and* operator (&&)
+- The *or* operator (||)
+- The *not* operator (or we can use the bang operator *!*) 
+
+Let's see an example on how to use these operators.
+```javascript
+let mood = 'sleepy';
+let tirednessLevel = 6;
+
+if (mood === 'sleepy' && tirednessLevel > 8){
+  console.log('time to sleep')
+} else{
+  console.log('not bed time yet')
+}
+```
