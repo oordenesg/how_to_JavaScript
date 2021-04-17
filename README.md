@@ -84,8 +84,9 @@ console.log(`My name is ${myName}. My favorite city is ${myCity}.`);
 
 ```
 
-## Exercise
+## Exercises
 
+### Exercise 1
 Using a temperature in degrees *Kelvin*, try to convert it and then display the temperature in degrees Fahrenheit and Newton. 
 ```javascript
 const kelvin = 293; // variable kelvin is constant
@@ -97,3 +98,17 @@ let newton = Math.floor(celsius*(33/100));
 console.log(`The tempeture is ${fahrenheit} degrees Fahrenheit.`);
 console.log(`The tempeture is ${newton} degrees Newton.`);
 ``` 
+### Exercise 2
+
+How old would you be if you were a dog?
+
+```javascrip
+const myAge = 29; // enter your current age as a number
+let earlyYears = 2; 
+earlyYears *= 10.5; 
+laterYears = myAge - 2;
+laterYears *= 4;
+myAgeInDogYears = earlyYears + laterYears;
+myName = 'Oscar'.toLowerCase(); // my name in lower case
+console.log(`My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years`) //create a sentence using the interpolation method.
+```
