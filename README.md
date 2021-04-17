@@ -161,3 +161,32 @@ if (mood === 'sleepy' && tirednessLevel > 8){
   console.log('not bed time yet')
 }
 ```
+
+Now, let's imagine that we have website and we want to take a user's name to make a personalized greeting. In some situations, the user does not have an account, making the username variable falsy. We can create a process using conditional statement to evaluate this procedure. 
+
+```javascript
+let defaultName;
+if (username) {   // If username is not falsy let's assign the username variable to defaultName
+  defaultName = username;
+} else {          // if username is falsy, show the string 'Strange'
+  defaultName = 'Stranger';
+}
+``` 
+Instead of using the classic *if else* structure we can also use a short form to evaluate the same procedure. 
+
+```javascript
+let defaultName = username || 'Stranger';
+```
+In general, we can user a *ternary* operator to simplify an *if else* statement. We can do this by changing the actual structure and using the *?* and *:* expressions
+
+```javascript
+let isNightTime = true;
+if (isNightTime) {
+  console.log('Turn on the lights!');
+} else {
+  console.log('Turn off the lights!');
+}
+
+// we can rewrite this using the following structure
+isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
+``` 
