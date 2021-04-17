@@ -177,7 +177,7 @@ Instead of using the classic *if else* structure we can also use a short form to
 ```javascript
 let defaultName = username || 'Stranger';
 ```
-In general, we can user a *ternary* operator to simplify an *if else* statement. We can do this by changing the actual structure and using the *?* and *:* expressions
+In general, we can user a *ternary* operator to simplify an *if else* statement. We can do this by changing the actual structure and using the *'?'* and *':'* expressions
 
 ```javascript
 let isNightTime = true;
@@ -189,4 +189,9 @@ if (isNightTime) {
 
 // we can rewrite this using the following structure
 isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
+
+// Another example
+
+let favoritePhrase = 'Love That!';
+favoritePhrase ==='Love That!' ? console.log('I love that!') : console.log("I don't love that!");
 ``` 
