@@ -230,3 +230,68 @@ switch (groceryItem) {
     break;
 }
 ```
+
+## Exercises
+
+### Exercise 1
+
+In this project we will build the Magic Eight Ball using control flow in JS. Create a function that can answer your questions using your name. If you don't add your name. It should print the answer of your question without your name. 
+
+```javascript
+let userName = 'Oscar';
+let userQuestion = 'It will rain tomorrow?';
+let randomNumber = Math.floor(Math.random()*8);
+let eightBall = '';
+
+switch (randomNumber){
+  case 0:
+    eightBall = 'It is certain'
+  case 1:
+    eightBall = 'It is decidedly so'
+  case 2:
+    eigtBall = 'Reply hazy try again'
+  case 3:
+    eightBall = 'Cannot predict now'
+  case 4:
+    eightBall = 'Do not count on it'
+  case 5:
+    eightBall = 'My sources say no'
+  case 6:
+    eightBall = 'Outlook not so good'
+  case 7:
+    eightBall = 'Signs point to yes'
+}
+
+userName ? console.log(`Hello ${userName}. ${userQuestion}. ${eightBall}`) :
+console.log(`Hello!. ${userQuestion}. ${eightBall}`)
+
+``` 
+
+### Exercise 2
+
+Create a program using JS that can help show the number of the runner and the time he or she competes. Remember that there are adult runners (over 18 years of age) and youth runners (under 18 years of age). They can register early or late. Runners are assigned a race number and start time based on their age and registration.
+
+Race number: Early adults receive a race number at or above 1000. All others receive a number below 1000.
+Start time: Adult registrants run at 9:30 am or 11:00 am. Early adults run at 9:30 am. Late adults run at 11:00 am. Youth registrants run at 12:30 pm (regardless of registration). But we didn’t plan for runners that are exactly 18! 
+
+```javascript
+let raceNumber = Math.floor(Math.random() * 1000);
+const registeredEarly = true;
+const runnerAge = 18;
+
+if (runnerAge > 18 && registeredEarly){
+  raceNumber = 1000
+} else {
+  raceNumber
+}
+
+if (runnerAge > 18 && registeredEarly){
+  console.log(`Your race number is ${raceNumber}. You will race at 9:30 am.`)
+} else if (runnerAge > 18 && registeredEarly === false) {
+  console.log(`Your race number is ${raceNumber}. You will race at 11:00 am.`)
+} else if (runnerAge < 18) {
+  console.log(`Your race number is ${raceNumber}. You will race at 12:30 pm.`)
+} else{
+  console.log(`See the registration desk`)
+}
+```
