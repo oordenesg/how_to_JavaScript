@@ -102,7 +102,7 @@ console.log(`The tempeture is ${newton} degrees Newton.`);
 
 How old would you be if you were a dog?
 
-```javascrip
+```javascript
 const myAge = 29; // enter your current age as a number
 let earlyYears = 2; 
 earlyYears *= 10.5; 
