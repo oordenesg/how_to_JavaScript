@@ -295,3 +295,43 @@ if (runnerAge > 18 && registeredEarly){
   console.log(`See the registration desk`)
 }
 ```
+
+
+# Functions
+
+In JS there are several ways to create a function. The most common one is by using a function declaration. A function declaration binds a function to a name, or an identifies. Additionally, all the functions have a block of statements which perform a specific task. 
+
+```javascript
+function getReminder(){  // function 1 
+  console.log('Water the plants.')
+}
+
+function greetInSpanish(){ // function 2
+  console.log('Buenas Tardes.')
+}
+
+getReminder() // call the function getReminder() to print the message
+greetInSpanish() // call the function greetInSpanish() to print the message
+```
+
+Previously, we just called functions without inputs. When declaring a function, we also can specify its parameters. With this, we can perform a task using the inputs(s). Let's see an example.
+
+```javascript
+function sayThanks(name) {
+  console.log('Thank you for your purchase '+ name + '! We appreciate your business.');
+}
+sayThanks('Cole') // Calling the function with an input (string). The function will print the message with the name of the person. 
+```
+
+In some cases, we need to pass a default parameter. It is possible to do this by just adding this defaul parameter. By using a default parameter, we account for situations when an argument isn’t passed into a function that is expecting an argument.
+
+```javascript
+function makeShoppingList(item1 = 'milk', item2 = 'bread', item3 = 'eggs'){
+  console.log(`Remember to buy ${item1}`);
+  console.log(`Remember to buy ${item2}`);
+  console.log(`Remember to buy ${item3}`);
+}
+makeShoppingList() // the console will print milk,bread,eggs
+makeShoppingList('soda','chocolate','milk') // the console will print soda,chocolate, milk
+```
+
