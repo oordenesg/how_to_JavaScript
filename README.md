@@ -364,4 +364,16 @@ function costOfMonitors(rows,columns){
 const totalCost = costOfMonitors(5,4);
 console.log(totalCost)
 ```
+Another way to define a function is to use a function expression. This is possible defining a function inside an expression. We can do this just using the function keyword. In a function expression, we can omit the function's name. A function with no name is called an anonymous function. The following code shows an example.
+```javascript
+const plantNeedsWater = function(day){
+  if (day === 'Wednesday'){
+    return true
+  } else {
+    return false
+  }
+}
 
+plantNeedsWater('Tuesday');
+console.log(plantNeedsWater('Tuesday'));
+```
