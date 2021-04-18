@@ -335,3 +335,33 @@ makeShoppingList() // the console will print milk,bread,eggs
 makeShoppingList('soda','chocolate','milk') // the console will print soda,chocolate, milk
 ```
 
+In some cases, we want to return a value o result from the function. To create a return statement, we use the return keyword followed by the value what we wish to return. This keyword is used within the funcion body and it will help us to no return undefined results. Let's see an example
+
+```javascript
+function rectangleArea(width, height) {
+  let area = width * height;
+}
+console.log(rectangleArea(5, 7)) // Prints undefined
+
+// return the area
+
+function rectangleArea(width, height) {
+  let area = width * height;
+  return area 
+}
+console.log(rectangleArea(5, 7)) // Prints 35
+```
+We can also use the return value of a function inside another function. These functions are called *helper functions*. Since each the output of an specific function will help to return a new resultos from a second function. In some cases this makes our code easier to read and debug if necessary. Here's an example.
+
+```javascript
+function monitorCount(rows, columns) {
+  return rows * columns;
+}
+function costOfMonitors(rows,columns){
+  return monitorCount(rows,columns)*200
+}
+
+const totalCost = costOfMonitors(5,4);
+console.log(totalCost)
+```
+
