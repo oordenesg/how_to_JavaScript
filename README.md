@@ -377,3 +377,35 @@ const plantNeedsWater = function(day){
 plantNeedsWater('Tuesday');
 console.log(plantNeedsWater('Tuesday'));
 ```
+
+In ES6 we can also create a function by using the *arrow function*. Thi is a shorter way to write a function by using *fat arrow* notation *() =>*. Arrow functions remove the need to type out the keyword function every time we need to create a function. Using the last example, we ca rewrite out by using the new notation-
+```javascript
+const plantNeedsWater = (day) => {
+  if (day === 'Wednesday') {
+    return true;
+  } else {
+    return false;
+  }
+};
+``` 
+
+In JS we can also write functions in a more concise way. To do this, we can write a function using the *Consise Body Arrow Functions*. We'll explore a few of these techniques below.
+
+```javascript
+// In terms of parameters
+// zero parameters
+const functionName = () => {};
+// one parameter
+const functionName = paramOne => {};
+// two o more parameters
+const functionName = (paramOne,paramTwo) => {};
+
+//In terms of a function body
+//single-line block 
+const sumNumbers = number => number + number;
+// multi-line block
+const sumNumbers = number =>{
+  const sum = number + number;
+  return sum;
+}
+``` 
