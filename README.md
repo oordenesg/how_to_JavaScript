@@ -409,3 +409,14 @@ const sumNumbers = number =>{
   return sum;
 }
 ``` 
+Let's see an example of how to convert a function using the *Consise Body* form.
+
+```javascript
+const plantNeedsWater = (day) => {
+  return day === 'Wednesday' ? true : false;
+};
+
+// reconverting this function
+
+const plantNeedsWater = day => day === 'Wednesday' ? true : false;
+```
