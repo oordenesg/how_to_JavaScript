@@ -436,5 +436,15 @@ function logCitySkyline() {  // in this seccion we added a code within a block
 }
 console.log(logCitySkyline())
 ```
+In *Scope*, our variables can declare inside or outside the blocks. In global scope, variables are declared outside of blocks. These variables are called *global variables*. We can create a funcion calling these global variables and the function should be able to access to these variables. The following code shows an example. 
 
+```javascript
+const satellite =  'The Moon'; // global variable satellite
+const galaxy = 'The Milky Way'; // global variable galaxy
+const stars = 'North Star'; // global variable start
 
+const callMyNightSky = () => {
+  return 'Night Sky: ' + satellite + ', ' + stars + ', and ' + galaxy;
+}
+console.log()callMyNightSky())
+```
