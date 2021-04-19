@@ -420,3 +420,21 @@ const plantNeedsWater = (day) => {
 
 const plantNeedsWater = day => day === 'Wednesday' ? true : false;
 ```
+
+# Scope
+
+Another relevant idea in programming is *scope*. But, what is this?. *Scopes* defines "where variables can be accesed of referenced". In some cases, we can use a variable from anywhere within a specific program. However, there may be some variables that can be accessed in a specific part of your code or in a specific context. In this part, we will cover this concept more in detail.
+
+First of all, it is important to mention another relevant concept called *block*. We can describe a block as a "code found inside a set of curly braces". In general, a block can help us create a structure with a function. Let's see an example
+
+```javascript
+const city = 'New York City'; // we've defined a variable outside the function
+
+function logCitySkyline() {  // in this seccion we added a code within a block 
+  let skyscraper = 'Empire State Building'
+  return 'The stars over the ' + skyscraper + ' in ' + city;
+}
+console.log(logCitySkyline())
+```
+
+
