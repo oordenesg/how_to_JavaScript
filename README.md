@@ -448,3 +448,34 @@ const callMyNightSky = () => {
 }
 console.log()callMyNightSky())
 ```
+
+On the other hand, when we talk about *block scope* we refer to the creation of variables within the block. This means that these variables will only exist within the function. Given this, if we call these varaibles out of the function, we will get an error from the function. Let's see an example.
+When we talk about you we refer to the creation of variables within the block.
+
+```javascript
+const logVisibleLightWaves = () => {
+  const lightWaves = 'Moonlight'; // creating a variable within the function. This variable will only exist locally
+  return console.log(lightWaves)
+}
+
+logVisibleLightWaves() // it will print Moonlight
+lightWaves // if we call the variable, we will get an error to the console. 
+```
+
+In some cases, it is quite overwhelming to have so many global variables which can be easy to get confused. We call this *Scope pollution* and is when we have too many global variables in the global space. This could cause problems in our program. Let's see what happend when we do not use global and local variables correctly. 
+
+```javascript
+const satellite = 'The Moon';
+const galaxy = 'The Milky Way';
+let stars = 'North Star'; // we've defined our variable stars globally
+
+const callMyNightSky = () => {
+  stars = 'Sirius'  // where we've defined our variable start again, but locally
+	return 'Night Sky: ' + satellite + ', ' + stars + ', ' + galaxy;
+};
+
+console.log(callMyNightSky()); 
+console.log(stars) // this line will print 'Sirius' but no 'North Star'
+```
+
+
