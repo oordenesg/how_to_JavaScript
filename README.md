@@ -478,4 +478,5 @@ console.log(callMyNightSky());
 console.log(stars) // this line will print 'Sirius' but no 'North Star'
 ```
 
+Finally, it is important to keep in mind the importance of create global and local variables. It makers our code more understandable since it helps our to check which variables are linked with different parts of the program rather than having to keep track all of them. 
 
