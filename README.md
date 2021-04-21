@@ -488,8 +488,10 @@ We've covered a bunch of new topics in JavaScript. Now it is time put all this k
 1. Write a function call greetWorld(). This function should have no parameters and return the string 'Hello, World!'.
 2. Write a function to check of you can vote or note. Remember, if you are 18 years old or older, you can vote. In this case, this funciton should print *true* otherwise *false*.
 3. Write a function to check if two strings are similar or not. Let's call this function agreeOrDisagree(). This function should print 'You agree!' if both strings are the same.
-4. Create a function and call it *lifePhase()*. This function should take just one input (age) and must return in which phase of life you are. Be creative with the phase of life. *Hint: if statement*
-5. 
+4. Create a function and call it *lifePhase()*. This function should take just one input (age) and must return in which phase of life you are. Be creative with the phase of life. *Hint: if statement*.
+5.  Calculate your final grade using a function. Create a funcion called *finalgrade()*. This function should take 3 arguments. It should return an error if any of the three grades are less than 0 or greater than 100. Additionally, it should print if you got an 'A', 'B','C','D','F'.
+6.  Create a function called *reportingForDuty()*. This function should have two inputs, rank and lastname, and it should return 'rank lastName reporting for duty!’.
+7.  Create a function called *calculateWeight()*. This function should have two parameters, *earthWeight* (number) and *planet* (string). We want to return return a number representing what that Earth-weight would equate to on the planet passed in. For this function, please consider: 'Mercury' weight = earthWeight * 0.378, 'Venus' weight = earthWeight * 0.907, 'Mars' weight = earthWeight * 0.377, 'Jupiter' weight = earthWeight * 2.36, 'Saturn' weight = earthWeight * 0.916.
 
 
 
