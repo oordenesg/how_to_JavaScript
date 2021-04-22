@@ -492,6 +492,12 @@ We've covered a bunch of new topics in JavaScript. Now it is time put all this k
 5.  Calculate your final grade using a function. Create a funcion called *finalgrade()*. This function should take 3 arguments. It should return an error if any of the three grades are less than 0 or greater than 100. Additionally, it should print if you got an 'A', 'B','C','D','F'.
 6.  Create a function called *reportingForDuty()*. This function should have two inputs, rank and lastname, and it should return 'rank lastName reporting for duty!’.
 7.  Create a function called *calculateWeight()*. This function should have two parameters, *earthWeight* (number) and *planet* (string). We want to return return a number representing what that Earth-weight would equate to on the planet passed in. For this function, please consider: 'Mercury' weight = earthWeight * 0.378, 'Venus' weight = earthWeight * 0.907, 'Mars' weight = earthWeight * 0.377, 'Jupiter' weight = earthWeight * 2.36, 'Saturn' weight = earthWeight * 0.916.
+8.  Create a function that takes an input and returns true if that value is truthy and false it that value is falsy. 
+9.  In general, A person's number of imaginary friends are alaays 25% of their total friends. Write a function to calculate this. The output should be a whole number.
+10.   Write a function to create a sentence. This function should have 3 string parameters. 
+
+
+
 
 
 
