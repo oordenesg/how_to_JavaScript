@@ -494,8 +494,9 @@ We've covered a bunch of new topics in JavaScript. Now it is time put all this k
 7.  Create a function called *calculateWeight()*. This function should have two parameters, *earthWeight* (number) and *planet* (string). We want to return return a number representing what that Earth-weight would equate to on the planet passed in. For this function, please consider: 'Mercury' weight = earthWeight * 0.378, 'Venus' weight = earthWeight * 0.907, 'Mars' weight = earthWeight * 0.377, 'Jupiter' weight = earthWeight * 2.36, 'Saturn' weight = earthWeight * 0.916.
 8.  Create a function that takes an input and returns true if that value is truthy and false it that value is falsy. 
 9.  In general, A person's number of imaginary friends are alaays 25% of their total friends. Write a function to calculate this. The output should be a whole number.
-10.   Write a function to create a sentence. This function should have 3 string parameters. 
-
+10. Write a function to create a sentence. This function should have 3 string parameters. 
+11. Create a function *howOld()* thar returns how old some who is currently that age was during that year.
+12. Let's write a function that calculate tip given the quality of the service in a restaurant. To this, please consider: ‘bad’ should return a 5% tip, ‘ok’ should return a 15% tip, ‘good’ should return a 20% tip ‘excellent’ should return a 30% tip and all other inputs should default to 18%. To create this function just use 2 parameters.
 
 
 
