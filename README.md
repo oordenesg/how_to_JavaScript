@@ -589,3 +589,10 @@ const removeElement = (newArr) =>{
 removeElement(concept) 
 console.log(concept) // it will print ['arrays', 'can', 'be']
 ```
+Finally, another important concept in this section is *"nested array"*. This concept means that an array is storing other arrays. Examine the example below: 
+
+```javascript
+const numberClusters = [[1,2],[3,4],[5,6]]; // three arrays inside one array
+const target = numberClusters[2][1] // select the second element of the third array
+console.log(target) // it will print 6
+```
