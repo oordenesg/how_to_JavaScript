@@ -673,7 +673,6 @@ while (currentCard != 'spade'){  // run until we find the card "spade"
   currentCard = cards[Math.floor(Math.random()*4)];
   console.log(currentCard)
 }
-
 ```
 
 
