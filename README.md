@@ -664,4 +664,19 @@ for(let i = 0; i < bobsFollowers.length;i++){
 }
 console.log(mutualFollowers)
 ```
+Another type of loop is the *While Loop*. But, what's the difference between *for loop* and *while loop*?. *For loop* is ideal when we know how many times the loop should run. In some cases, we don't know how many times we need to run out program. In that case, a *while loop* is a better choice. Let's see an example.
+
+```javascript
+const cards = ['diamond', 'spade', 'heart', 'club'];
+let currentCard = 0;
+while (currentCard != 'spade'){  // run until we find the card "spade"
+  currentCard = cards[Math.floor(Math.random()*4)];
+  console.log(currentCard)
+}
+
+```
+
+
+
+
 
