@@ -500,6 +500,18 @@ We've covered a bunch of new topics in JavaScript. Now it is time put all this k
 
 
 
-## Object Oriented Programming 
+## JavaScrip Part 2: Object Oriented Programming 
+
+In this part we will check additional aspects and features of JS and start writting more complex programs. In terms of the new topics, we will cover arrays, loops, objects and iterators.
+
+# Arrays
+
+In different programming languagues, Arrays are a way of making list. Lists, in general, allow us to organize data in real life. Arrays can store any data type like strings, number and booleans. Let's see an example
+
+```javascript
+let my_first_array = ['element_1', 'element_2', 'element_3'] // array with 3 elements. 
+console.log(my_first_array) // print out first array
+```
+As we saw before, to create an array we just need to add *[,,,]* with different elements within it. Additionally, we have to declare the name of this array. 
 
 
