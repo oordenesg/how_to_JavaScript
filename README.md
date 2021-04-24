@@ -674,8 +674,27 @@ while (currentCard != 'spade'){  // run until we find the card "spade"
   console.log(currentCard)
 }
 ```
+There is another case when we cant to run a code at least once and then loop based on a specific condition. We can do this by using *Do while* statement. This statement says to do a task once and then keep doing it until a specific condition is no longer met
 
+```javascript
+const cupsOfSugarNeeded = 2;
+let cupsAdded = 0;
 
+do {
+ cupsAdded++
+ console.log(cupsAdded + ' cup was added') 
+} while (cupsAdded < cupsOfSugarNeeded);
+```
 
+In some cases we want stop the foor loop when one condition is met. We can do this by adding the *break* keyword inside the *for* loop. Let's check how to do this.
 
-
+```javascript
+const rapperArray = ["Lil' Kim", "Jay-Z", "Notorious B.I.G.", "Tupac"];
+for (let i = 0; i < rapperArray.length; i++){
+  if (rapperArray[i] === 'Tupac'){
+    break;
+  }
+  console.log(rapperArray[i])
+}
+console.log("are the best. So if you didn't know, now you know.")
+```
