@@ -596,3 +596,31 @@ const numberClusters = [[1,2],[3,4],[5,6]]; // three arrays inside one array
 const target = numberClusters[2][1] // select the second element of the third array
 console.log(target) // it will print 6
 ```
+
+## Exercise
+
+```javascript
+
+let secretMessage = ['Learning', 'is', 'not', 'about', 'what', 'you', 'get', 'easily', 'the', 'first', 'time,', 'it', 'is', 'about', 'what', 'you', 'can', 'figure', 'out.', '-2015,', 'Chris', 'Pine,', 'Learn', 'JavaScript'];
+
+//1. Remove the last string of the array.
+secretMessage.pop()
+console.log(secretMessage.length)
+
+//2. Add the words 'to' and 'program' to the end of the array.
+secretMessage.push('to','Program')
+console.log(secretMessage.length)
+//3. Change the word 'easily' to the word 'right'.
+secretMessage[secretMessage.indexOf('easily')] = 'right'
+
+//4. Remove the first element of the array.
+secretMessage.shift()
+
+//5. Add the new element 'programming' to the beginning of the array.
+secretMessage.unshift('Programming')
+
+//6. Remove the strings from 'get' to 'time,' and replace them with the single string 'know',
+secretMessage.splice(secretMessage.indexOf('get'),5,'know')
+//7. Print the sentence
+console.log(secretMessage.join(" "))
+```
