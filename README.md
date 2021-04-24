@@ -514,4 +514,79 @@ console.log(my_first_array) // print out first array
 ```
 As we saw before, to create an array we just need to add *[,,,]* with different elements within it. Additionally, we have to declare the name of this array. 
 
+But, what happend if we want just pick one element of our fist list. We can do this by using index. Each element in a list has a numbered position (index). In JS, the first elment has the position 0. Let's see how we could access an element in an array. 
 
+```javascript
+const famousSayings = ['Fortune favors the brave.', 'A joke is a very serious thing.', 'Where there is love there is life.'];
+const listItem = famousSayings[0]; // saving the first elemet of our list 
+console.log(listItem) // print the first element of our list
+console.log(famousSayings[2]) // print the second element of our list
+console.log(famousSayings[3]) // print "undefined" result since there are just 3 element within our list. We're asking for the fourth element. 
+```
+
+Let's imagine that we've created one array but, after a couple of minutes, we realized that one of the elements is wrong. As in other programming languagues, here in JS we can also change one elemen within a list. The following example shows this.
+
+```javascript
+let groceryList = ['bread', 'tomatoes', 'milk']; // creating a array with three elments
+groceryList[1] = 'avocados'; // we want to change the second element
+console.log(groceryList) // this will print 'bread','avocados','milk'
+```
+
+As seen before, we've created using the *let* keyword. However, we can also create arrays using *const* keyword. In both, we can change specific elements within our array. However, if we use the *const* keyword, this array cannot be reassing a new array.
+
+```javascript
+let condiments = ['Ketchup', 'Mustard', 'Soy Sauce', 'Sriracha']; 
+const utensils = ['Fork', 'Knife', 'Chopsticks', 'Spork'];
+
+condiments[0] = 'Mayo'  // let's change the first element
+console.log(condiments) // it will print 'Mayo','Mustard','Soy Sauce', 'Sriracha'
+
+condiments = ['Mayo'] // the new array will only contain 'Mayo'
+
+utensils[3] = 'Spoon' // let's change the fourth element of our array
+console.log(utensils) // Our array will contain 'Fork','Knife','Chopsticks','Spoon'
+
+const utensils = ['Spoon'] // this will print an error since we've declared this variable using const
+console.log(utensils)
+```
+There are severals built-in functions that can be use in arrays. The first one is the *length* function and it helps to determine the number of elements within our list. The function is *push* and it will add new elements to the end of our array. On the other hand, the funcion *pop* removes the last element of our function. Let's see an example
+
+
+
+const chores = ['wash dishes', 'do laundry', 'take out trash'];
+console.log(chores.length)
+chores.push('clean you bedroom','make your bed')
+console.log(chores)
+console.log(chores.length)
+ it returns the number of items in the array.
+
+
+
+const chores = ['wash dishes', 'do laundry', 'take out trash', 'cook dinner', 'mop floor'];
+chores.pop()
+console.log(chores)
+
+
+
+
+
+array.lenght
+
+
+One method, .push() allows us to add items to the end of an array. Here is an example of how this is used:
+
+Another array method, .pop(), removes the last item of an array.
+
+const groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains'];
+
+groceryList.shift()// remove the first element
+console.log(groceryList) 
+
+groceryList.unshift('popcorn') // add 'popcorn' to the beginning of our array 
+console.log(groceryList) 
+
+console.log(groceryList.slice(1,4))
+console.log(groceryList)
+
+const pastaIndex  = groceryList.indexOf('pasta')
+console.log(pastaIndex)
