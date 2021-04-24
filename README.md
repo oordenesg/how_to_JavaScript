@@ -624,3 +624,44 @@ secretMessage.splice(secretMessage.indexOf('get'),5,'know')
 //7. Print the sentence
 console.log(secretMessage.join(" "))
 ```
+### Loops
+
+A useful programming tool is the use of loops. A loop repeats a set of instructions until a specified condition is met. When we see that a problem has to repeat a task multiple times, then we will probably write a loop to solve it. This useful tool will help us to write more efficent code in order to automates processes.  
+
+The first, an one of most important element, in loops is the *for* keyword. Inside this keyword, we need to defined three main elements. The first one is the *initialization* which starts the loop and can also be used to declare the iterator variable. The second is the * stop condition * which states the condition that must be met. Last element is an *iteration statement* which is used to update the iterator variable on each loop.
+
+```javascript
+for (let counter = 5; counter <= 10; counter++){ // thre main elements "initialization", "stop condition" and the "iterator"
+  console.log(counter)
+  }
+  
+// The loop below loops from 0 to 3. Edit it to loop backwards from 3 to 0
+for (let counter = 3; counter >= 0; counter--){ // again, we've declared the three main elements.
+  console.log(counter);
+}
+```
+We can also iterate over arrays using for loops. To do this we just have consider the length of our array since the loop needs a *stop condition*. Let's see an example.
+
+```javascript
+const vacationSpots = ['Bali', 'Paris', 'Tulum'];
+for(let i = 0;i < vacationSpots.length; i++){  // We have the three conditions having established a stop condition according to the length of the array.
+  console.log('I would love to visit ' +vacationSpots[i])
+}
+``` 
+
+In some cases we need to add a *for* loop inside another loop. We call that a *nested loop*. We can use this technique to compare elements in two arrays, for example. For each round of the outer for loop, the inner for loop will run completely. 
+
+```javascript
+const bobsFollowers = ['Friend_1','Friend_2','Friend_3','Friend_4']; 
+const tinasFollowers = ['Friend_1','Friend_3','Friend_5'];
+const mutualFollowers = [];
+for(let i = 0; i < bobsFollowers.length;i++){
+  for(let j = 0;j < tinasFollowers.length;j++){
+    if (bobsFollowers[i] === tinasFollowers[j]){
+      mutualFollowers.push(bobsFollowers[i])
+    }
+  }
+}
+console.log(mutualFollowers)
+```
+
