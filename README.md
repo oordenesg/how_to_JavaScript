@@ -551,42 +551,25 @@ console.log(utensils)
 ```
 There are severals built-in functions that can be use in arrays. The first one is the *length* function and it helps to determine the number of elements within our list. The function is *push* and it will add new elements to the end of our array. On the other hand, the funcion *pop* removes the last element of our function. Let's see an example
 
-
-
-const chores = ['wash dishes', 'do laundry', 'take out trash'];
-console.log(chores.length)
-chores.push('clean you bedroom','make your bed')
-console.log(chores)
-console.log(chores.length)
- it returns the number of items in the array.
-
-
-
-const chores = ['wash dishes', 'do laundry', 'take out trash', 'cook dinner', 'mop floor'];
-chores.pop()
-console.log(chores)
-
-
-
-
-
-array.lenght
-
-
-One method, .push() allows us to add items to the end of an array. Here is an example of how this is used:
-
-Another array method, .pop(), removes the last item of an array.
-
+```javascript
 const groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains'];
 
+console.log(chores.length) // it will print 7
+
+chores.push('rice','tea') // it will add these two new elements to the end of our array
+console.log(chores) // it will print the new array with 9 elements.
+
 groceryList.shift()// remove the first element
-console.log(groceryList) 
+console.log(groceryList) // array without 'orange juice'
 
 groceryList.unshift('popcorn') // add 'popcorn' to the beginning of our array 
-console.log(groceryList) 
+console.log(groceryList) // the first element will be 'popcorn'
 
-console.log(groceryList.slice(1,4))
-console.log(groceryList)
+console.log(groceryList.slice(1,4)) //let's select elements from our array. From index 1 to 3 (JS does not consider the fourth element)
+console.log(groceryList) // this will print the full array with 9 elements
 
-const pastaIndex  = groceryList.indexOf('pasta')
+const pastaIndex  = groceryList.indexOf('pasta') // get the index of the 'pasta' element. 
 console.log(pastaIndex)
+```
+
+
