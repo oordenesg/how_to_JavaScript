@@ -572,4 +572,20 @@ const pastaIndex  = groceryList.indexOf('pasta') // get the index of the 'pasta'
 console.log(pastaIndex)
 ```
 
+In JS, we can change an array inside a function. When we do this, and if the array is mutated inside the function, the changes will be maintained outside the function as well. Let's see and example.
 
+```javascript
+const concept = ['arrays', 'can', 'be', 'mutated']; // see we are using the const keyword
+function changeArr(arr){
+  arr[3] = 'MUTATED';
+}
+
+changeArr(concept);  
+console.log(concept)  // it will print ['arrays', 'can', 'be', 'MUTATED']
+
+const removeElement = (newArr) =>{
+  newArr.pop()
+}
+removeElement(concept) 
+console.log(concept) // it will print ['arrays', 'can', 'be']
+```
