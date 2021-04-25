@@ -733,3 +733,17 @@ console.log('Time is up!');
 ```
 ### Objects
 
+One of most fundamentals data types in JS are objects. Objects allow us to the model real-world-things or we can use them to build data structures that make our web possible.
+Objects in JS store data and functions that can perform several tasks. In this seccion we will cover in detail the main aspects of objects and we will understand the mechanics of them. 
+
+To create an object in JS we just have declare the name of the object + *{}* (curly braces). Inside our object, we can store unordered data. This data must be organized into key-value pairs. But, what is a key? A key is a variable name that points to a location in memory that holds a value. Given this, to add key-value paris we just have write the key'sname followed by a colon and then the value. Let's see an example
+
+```javascrit
+let fasterShip = {
+  'Fuel Type':'Turbo Fuel',  // The propertie 'Fuel Type' has quotation marks because it has a space.
+  color: 'silver'
+};
+```
+
+
+
