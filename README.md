@@ -781,5 +781,56 @@ spaceship.color = 'glorious gold' //update the value of the property color
 spaceship.numEngines = 10 // add a new property-value
 delete spaceship['Secret Mission']; // remove the propertie 'Screte Mission'
 ```
+In some cases, we want to store a function inside our object. This is what we called a *method*. In objects, a property is what an object has, while a method is what an object does. 
 
+```javascript
+let retreatMessage = 'We no longer wish to conquer your planet. It is full of dogs, which we do not care for.';
 
+const alienShip = {
+  retreat: function () {
+    console.log(retreatMessage) // if we call the method retreat, show the retreatmessage
+  },
+  takeOff: function () {
+    console.log('Spim... Borp... Glix... Blastoff!') // if we call the method takeoff print this message
+  }
+}
+alienShip.retreat()
+alienShip.takeOff()
+```
+
+With this we realize that every time we use *console.log()* we are calling the *console* object and the *log* method. In some real applications, objects are often nested, this means that one object could have another object as a property. 
+
+```javascript
+let spaceship = {
+  passengers: null,
+  telescope: {
+    yearBuilt: 2018,
+    model: "91031-XLT",
+    focalLength: 2032 
+  },
+  crew: {
+    captain: { 
+      name: 'Sandra', 
+      degree: 'Computer Engineering', 
+      encourageTeam() { console.log('We got this!') },
+     'favorite foods': ['cookies', 'cakes', 'candy', 'spinach'] }
+  },
+  engine: {
+    model: "Nimbus2000"
+  },
+  nanoelectronics: {
+    computer: {
+      terabytes: 100,
+      monitors: "HD"
+    },
+    'back-up': {
+      battery: "Lithium",
+      terabytes: 50
+    }
+  }
+}; 
+
+const capFave = spaceship.crew.captain['favorite foods'][0] // select the firt favorite food of the captain
+spaceship.passengers = [{name: 'passenger_1'}] // add a new passenger
+const firstPassenger = spaceship.passengers[0] // create a new variable and store the passenger's name. 
+```
