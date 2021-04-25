@@ -767,3 +767,19 @@ let propName =  'Active Mission';
 let isActive = spaceship['Active Mission'];
 console.log(spaceship[propName])
 ```
+
+Using objects, we can not only select some properties but we can also update, add or delete values of some properties. Here is an example:
+
+```javascript
+let spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  homePlanet : 'Earth',
+  color: 'silver',
+  'Secret Mission' : 'Discover life outside of Earth.'
+};
+spaceship.color = 'glorious gold' //update the value of the property color
+spaceship.numEngines = 10 // add a new property-value
+delete spaceship['Secret Mission']; // remove the propertie 'Screte Mission'
+```
+
+
