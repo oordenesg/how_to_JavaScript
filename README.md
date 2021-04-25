@@ -834,3 +834,58 @@ const capFave = spaceship.crew.captain['favorite foods'][0] // select the firt f
 spaceship.passengers = [{name: 'passenger_1'}] // add a new passenger
 const firstPassenger = spaceship.passengers[0] // create a new variable and store the passenger's name. 
 ```
+
+In JS objects are passed by reference. When we pass a variable assigned to an object into a function as a arguemtn, the computer interprets the parameter name as pointing to the sape in memory. This means that the function will mutate the object permanently. 
+
+```javascript
+let spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  homePlanet : 'Earth'
+};
+
+let greenEnergy = obj => {
+  obj['Fuel Type']= 'avocado oil' // update the value of the 'Fuel Type' property
+}
+let remotelyDisable = obj =>{
+  obj['disabled'] = true  // add a new property with the value true
+}
+greenEnergy(spaceship)
+remotelyDisable(spaceship)
+console.log(spaceship) // it will print 'Fuel type','homePlanet','disabled'
+```
+In objects, we can also use *for* loops to iterate over an object. Let's see an example
+
+```javascript
+let spaceship = {
+    crew: {
+    captain: { 
+        name: 'Lily', 
+        degree: 'Computer Engineering', 
+        cheerTeam() { console.log('You got this!') } 
+        },
+    'chief officer': { 
+        name: 'Dan', 
+        degree: 'Aerospace Engineering', 
+        agree() { console.log('I agree, captain!') } 
+        },
+    medic: { 
+        name: 'Clementine', 
+        degree: 'Physics', 
+        announce() { console.log(`Jets on!`) } },
+    translator: {
+        name: 'Shauna', 
+        degree: 'Conservation Science', 
+        powerFuel() { console.log('The tank is full!') } 
+        }
+    }
+}; 
+
+for (let member in spaceship.crew) {
+  console.log(member+': ' + spaceship.crew[member].name) // it wil print the charge of each member + member's name 
+}
+
+for (let member in spaceship.crew){
+  console.log(spaceship.crew[member].name + ': ' + spaceship.crew[member].degree ) // names + degree
+}
+```
+
