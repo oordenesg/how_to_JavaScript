@@ -740,10 +740,30 @@ To create an object in JS we just have declare the name of the object + *{}* (cu
 
 ```javascrit
 let fasterShip = {
-  'Fuel Type':'Turbo Fuel',  // The propertie 'Fuel Type' has quotation marks because it has a space.
+  'Fuel Type':'Turbo Fuel',  // The property 'Fuel Type' has quotation marks because it has a space.
   color: 'silver'
 };
 ```
+To access to the properties and methods. We just have to call the name of object + *.* + the property. See the code below.
+```javascript
+let spaceship = {
+  homePlanet: 'Earth',
+  color: 'silver'
+};
+spaceship.homePlanet; // It will return 'Earth',
+spaceship.color; // It will Return 'silver',
+```
 
-
-
+Another way to acess a key's values is by using *[]*. As we saw earlier, we can use bracket to obtain elements from an array. However, we can also use this method to obtain the properties of our objects.
+```javascript
+let spaceship = {
+  'Fuel Type' : 'Turbo Fuel',
+  'Active Mission' : true,
+  homePlanet : 'Earth', 
+  numCrew: 5
+ };
+let propName =  'Active Mission';
+// Write your code below
+let isActive = spaceship['Active Mission'];
+console.log(spaceship[propName])
+```
