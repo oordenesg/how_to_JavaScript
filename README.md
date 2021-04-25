@@ -698,3 +698,38 @@ for (let i = 0; i < rapperArray.length; i++){
 }
 console.log("are the best. So if you didn't know, now you know.")
 ```
+
+In some cases, typing the same *for* keyword over and over can be exhausting. ES6 version of js instroduced a shorter and more concise structure of *for* loops called *for...or* loop. Let's see the differecentes between them. 
+
+```javascript
+// for loop
+const hobbies = ['singing', 'eating', 'quidditch', 'writing'];
+for (let i = 0; i < hobbies.length; i++) {
+  console.log(`I enjoy ${hobbies[i]}.`);
+// for...of loop 
+const hobbies = ['singing', 'eating', 'quidditch', 'writing'];
+for (const hobby of hobbies) {
+  console.log(`I enjoy ${hobby}.`);
+}
+}
+```
+Let's see another example.
+```javascript
+const strangeBirds = ['Shoebill', 'Cockatrice', 'Basan', 'Terrorbird','Parotia','Kakapo'];
+for (const bird of strangeBirds) {
+  if (bird === 'Basan'){ 
+    break; 
+  }
+  console.log(bird);
+}
+
+// in some cases *for...of* loop 
+
+const nums = [1, 2, 3];
+for (let i = nums.length - 1; i >= 0; i--) {
+  console.log(nums[i]);
+}
+console.log('Time is up!');
+```
+### Objects
+
