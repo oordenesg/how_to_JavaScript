@@ -937,3 +937,41 @@ const robot = {
 };
 console.log(robot.energyLevel)
 ```
+
+Since we can return internal properies of our object, we can actually update or reassing values of existing propertis within an object. To do this we just have use the *set* keyword in our inner functions. Let's see an example
+
+```javascritp
+const robot = {
+  _model: '1E78V2',
+  _energyLevel: 100,
+  _numOfSensors: 15,
+  set numOfSensors(num){
+    if(typeof num === 'number' && num >= 0){
+      this._numOfSensors = num
+      //return this._numOfSensors;
+    } else {
+      console.log('Pass in a number that is greater than or equal to 0')
+      //return 'Sensors are currently down.'
+    }
+  },
+  
+};
+
+robot.numOfSensors = 100;
+console.log(robot._numOfSensors)
+```
+So far we've been creating individual objets. However, in some cases we want to create multiple intances quickly. To do this we can create a factory function. This factore is a function that returns an object and can be reused to make multiple objects. We can also define parameters to customize the objects. 
+
+```javascript
+const robotFactory = (model,mobile) =>{
+  return{
+    model: model,
+    mobile : mobile,
+    beep () {
+      console.log('Beep Boop')
+    }
+  }
+}
+const tinCan = robotFactory('P-500',true)
+tinCan.beep()
+```
