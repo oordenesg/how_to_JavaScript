@@ -940,7 +940,7 @@ console.log(robot.energyLevel)
 
 Since we can return internal properies of our object, we can actually update or reassing values of existing propertis within an object. To do this we just have use the *set* keyword in our inner functions. Let's see an example
 
-```javascritp
+```javascript
 const robot = {
   _model: '1E78V2',
   _energyLevel: 100,
@@ -965,8 +965,8 @@ So far we've been creating individual objets. However, in some cases we want to 
 ```javascript
 const robotFactory = (model,mobile) =>{
   return{
-    model: model,
-    mobile : mobile,
+    model: model,  // this can be written as "model,". It is not necessary to write "model: model,"
+    mobile : mobile, //same here, this can be written as "mobile,"
     beep () {
       console.log('Beep Boop')
     }
