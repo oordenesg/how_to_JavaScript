@@ -889,3 +889,38 @@ for (let member in spaceship.crew){
 }
 ```
 
+### Advanced Objects
+
+As we previously, we can create methods inside objetcts like the object *console.* and the method *log*.  Now,  what if we want to add a new method to our object that prints the value of a property? Can we do that?. Yes, we can do this by adding the keyword *this. Let's see an example.
+
+```javascript
+const robot = {
+  model: '1E78V2',
+  energyLevel: 100,
+  provideInfo(){
+    return ('I am ' + this.model + ' and my current energy level is ' + this.energyLevel+'.') //using the this keyword to call each property
+  }
+};
+console.log(robot.provideInfo()) // it will return the sentence with model and energylevel values.
+```
+In this case, we have to consider that we cannot use arrow functions since these functions inherently bind, or tie, an already defined this value to the function itself that is NOT the calling object.
+
+Another important aspect to cover in objects is privacy. In some cases we do not want other code simply accessing or updating a value o property. Sadly, JS does not have any feature to block properties or values. However, JS developers use a common convention *_* (underscore) to say that the property should not be altered. Here’s an example of using _ to prepend a property.
+
+```javascript
+const robot = {
+  _energyLevel: 100,
+  recharge(){
+    this._energyLevel += 30;
+    console.log(`Recharged! Energy is currently at ${this._energyLevel}%.`)
+  }
+};
+robot.recharge() // it will print "Recharged! Energy is currently at 130%." 
+// If we change _energyLevel: 'high'
+// _energyLevel: 'high'
+// it will print "Recharged! Energy is currently at high30%."
+``` 
+
+
+
+```
