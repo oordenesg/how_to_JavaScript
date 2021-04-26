@@ -921,6 +921,19 @@ robot.recharge() // it will print "Recharged! Energy is currently at 130%."
 // it will print "Recharged! Energy is currently at high30%."
 ``` 
 
+In JD, and specifically in objects, we can use one method called *Getters* which get and return the internal properties of an object. Additionally, *Getters* can return different values using conditionals and perform an action on the data when gettin a property. Le's see how to use *Getters.
 
-
+```javascript
+const robot = {
+  _model: '1E78V2',
+  _energyLevel: 100,
+  get energyLevel() {
+    if (typeof(this._energyLevel) === 'number'){
+      return ('My current energy level is ' + this._energyLevel)
+    } else {
+      return 'System malfunction: cannot retrieve energy level';
+      } 
+  }
+};
+console.log(robot.energyLevel)
 ```
