@@ -975,3 +975,24 @@ const robotFactory = (model,mobile) =>{
 const tinCan = robotFactory('P-500',true)
 tinCan.beep()
 ```
+
+Finally, it is important to mention some important built-in functions that can be applied using objects. These are *Object.keys*, *Object.entries*, *Object.assign*. With first, we can obtain the keys (properties) of our object. Using the second, we can not only get the keys but also the values of these properties. Finall, by *.assign* we can new keys and values to our object. 
+
+```javascript
+const robot = {
+	model: 'SAL-1000',
+  mobile: true,
+  sentient: false,
+  armor: 'Steel-plated',
+  energyLevel: 75
+};
+
+const robotKeys = Object.keys(robot);
+console.log(robotKeys);
+
+const robotEntries = Object.entries(robot)
+console.log(robotEntries);
+
+const newRobot = Object.assign({laserBlaster: true, voiceRecognition: true}, robot);
+console.log(newRobot);
+```
