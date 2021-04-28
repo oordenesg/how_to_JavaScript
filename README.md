@@ -996,3 +996,28 @@ console.log(robotEntries);
 const newRobot = Object.assign({laserBlaster: true, voiceRecognition: true}, robot);
 console.log(newRobot);
 ```
+
+### Exercise 
+
+Imagine that we want to try out different restaurants. However, figure out what you want to eat is time-consuming all the times. To do this, we want o create a three-course meal based on what is available on a menu. So, let's create this program.
+
+1. Create an empty object called *menu* .
+2. Add *_course* property to our *menu* object. This should be an empty object.
+3. Add three properties inside the *_course* object. These properties will be *appetizers*, *mains* and *desserts*
+4. Create *getter* and *setter* methods for the *appetizers*, *mains* and *desserts*
+5. Inside *menu*, create an empty getter method for the *course* property
+6. Whitin this getter method, return an object that contains key/value pairs for *_course*
+7. Inside *menu*, create a method called *.addDishToCourse*. This new method should take three parameters *courseName*,*DishName*,*DishPrice*.
+8. The *.addDhisToCourse* method should create an object called *dish* which has *name and *price* properties. The method should then push this dish object into the appropriate array in your menu‘s *_courses* object based on what *courseName* was passed in.
+9.  Inside menu, create a method called *.getRandomDishFromCourse()*. This method should take one parameter called *courseName*.
+10.  Inside the method *.getRandomDishFromCourse*, retrieve the array of the given course’s dishes from the menu‘s *_courses* object and store in a variable called dishes. Additionally, create a random index using length of the dishes array. Remember to use *Math.floor*. Then, return the dish located at that index in *dishes.*
+11.  
+
+
+
+
+
+
+
+
+
