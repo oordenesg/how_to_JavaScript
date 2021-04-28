@@ -1011,7 +1011,11 @@ Imagine that we want to try out different restaurants. However, figure out what 
 8. The *.addDhisToCourse* method should create an object called *dish* which has *name and *price* properties. The method should then push this dish object into the appropriate array in your menu‘s *_courses* object based on what *courseName* was passed in.
 9.  Inside menu, create a method called *.getRandomDishFromCourse()*. This method should take one parameter called *courseName*.
 10.  Inside the method *.getRandomDishFromCourse*, retrieve the array of the given course’s dishes from the menu‘s *_courses* object and store in a variable called dishes. Additionally, create a random index using length of the dishes array. Remember to use *Math.floor*. Then, return the dish located at that index in *dishes.*
-11.  
+11.  Create a function called *.generateRandomMeal()*. This funcion will generate a three-course meals and it does not take any parameters. This function should create three variables *appetizer, main, dessert*. For each of them we just have to call the *.getRandomDishFromCourse()* method. Then, create a new variable with the total price and return a sentenc with the variables and the total price.
+
+
+
+
 
 
 
