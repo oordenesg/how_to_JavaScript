@@ -1071,6 +1071,9 @@ return `The final bill is: \n ${selectedAppetizer.name} \n ${selectedMain.name} 
 };
 ```
 
+## HIGHER-ORDER FUNCTIONS
+
+When we speak to other people, we normally ommit a lot details when we mention a simply task. For example, when we say "bake" we are actually thinking of a process. Within this process we have to put something into an over for a set amount of time and then remove it. The word "bake" allows us to abstract away a lot of the details. In programming we accomplish this by writing functions. However, in some cases, we need to create functions that accept other functions as arguments and/or return functions as output. This is what we called **High-Order Functions**. Using the example, “We hosted a birthday party” is an abstraction that may build on the abstraction “We made a cake.”
 
 
 
