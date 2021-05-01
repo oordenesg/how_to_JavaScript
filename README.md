@@ -1090,7 +1090,83 @@ is2p2(); // call the function
 console.log(is2p2.name) //obtain the previous name
 
 ```
+As we mentioned previously, a higher order function is a function that accepts functions as paremters, returns a function, or both. We call the functions that get passed in as parameters and invoked callback functions because they get called during the execution of the higher-order function. Another importan concept here is *Invoking* and is means that the function would evaluate to the return value of that function call. In fact, when we pass a function in as an argument to another function, we don’t invoke it
 
+```javascript
+const checkThatTwoPlusTwoEqualsFourAMillionTimes = () => {
+  for(let i = 1; i <= 1000000; i++) {
+    if ( (2 + 2) != 4) {
+      console.log('Something has gone very wrong :( ');
+    }
+  }
+};
+
+const addTwo = num => num + 2;
+
+const timeFuncRuntime = funcParameter => {
+  let t1 = Date.now();
+  funcParameter();
+  let t2 = Date.now();
+  return t2 - t1;
+};
+
+const time2p2 = timeFuncRuntime(checkThatTwoPlusTwoEqualsFourAMillionTimes) // Invoking the timeFuncRuntime() function with the 
+// checkThatTwoPlusTwoEqualsFourAMillionTimes() function.
+
+const checkConsistentOutput = (func, val) => { //create a function with two parameters, a function and value.
+    let firstTry = func(val); // callback the function 
+    let secondTry = func(val); // callback the function 
+    if (firstTry === secondTry) {
+        return firstTry;
+    } else {
+        return 'This function returned inconsistent results';
+    }
+};
+
+checkConsistentOutput(addTwo,3)  // Invoke our checkConsistentOutput() with the addTwo() function 
+```
+
+## ITERATORS
+
+In JS, we can use *for* loops to iterate over a list of elements. However, we can also use built-in functions that help us to iterate called *iteration* methods. These methods are called on arrays to manipulate elements and return values. Let's see an example of some of these functions.
+
+```javascript
+const artists = ['Picasso', 'Kahlo', 'Matisse', 'Utamaro'];
+
+artists.forEach(artist => {   // .forEach element within an array
+  console.log(artist + ' is one of my favorite artists.');
+});
+
+const numbers = [1, 2, 3, 4, 5]; 
+
+const squareNumbers = numbers.map(number => {
+  return number * number;
+});
+console.log(squareNumbers);
+
+const things = ['desk', 'chair', 5, 'backpack', 3.14, 100];
+
+const onlyNumbers = things.filter(thing => { // .filter elements inside the array
+  return typeof thing === 'number';
+});
+console.log(onlyNumbers);
+```
+A relevant iterator is the *forEach* method. With this *built-in* we can iterate over an array and it could help us to print results on the console or carry out actions on each item inside the array
+
+```javascript
+const fruits = ['mango', 'papaya', 'pineapple', 'apple'];
+
+// using .forEach method in just on function
+fruits.forEach(function(fruitsItem){
+  return console.log('I want to eat a ' + fruitsItem)
+}
+); 
+// using .forEach method as a callback function
+function printFruit(element){
+  console.log('I want to eat a '+element)
+}
+fruits.forEach(printFruit)
+```
 
 
 
