@@ -1168,9 +1168,68 @@ function printFruit(element){
 fruits.forEach(printFruit)
 ```
 
+Another importan built-in function is *.map()*. This function will return an array with the new or modified elements from the array passed in the function.
 
+```javascript
+const animals = ['Hen', 'elephant', 'llama', 'leopard', 'ostrich', 'Whale', 'octopus', 'rabbit', 'lion', 'dog'];
+const secretMessage = animals.map(animal =>{
+  return animal.charAt(0)
+})
+console.log(secretMessage) // it will print an array with the results of the animals array. 
+```
+We can actually filter values by using a built-in function called *filter()*. Let's see how to use it.
 
+```javascript
+const randomNumbers = [375, 200, 3.14, 7, 13, 852];
 
+const smallNumbers = randomNumbers.filter(number => {  
+  return number < 250   // filter number less than 250.
+})
+console.log(smallNumbers)
+```
+To find the index of an element inside an array, we can use the function *.findIndex()*. The following code shows how to use this function.
+
+```javascript
+const animals = ['hippo', 'tiger', 'lion', 'seal', 'cheetah', 'monkey', 'salamander', 'elephant'];
+
+const foundAnimal = animals.findIndex(animal =>{
+  return animal == 'elephant'; // find the index when the animal is equal to 'elephant'
+})
+console.log(foundAnimal)
+console.log(animals[7])
+```
+Another widely used iteration method is .reduce(). The .reduce() method returns a single value after iterating through the elements of an array. This function has two parameters called the *accumulator* and the *currentValue*. The value of accumulator starts off as the value of the first element in the array and the currentValue starts as the second element.
+
+```javascript
+const newNumbers = [1, 3, 5, 7];
+
+const newSum = newNumbers.reduce((accumulator ,currentValue) =>{
+  console.log('The value of accumulator: ',accumulator);
+  console.log('The value of currentValue:',currentValue);
+  return accumulator+currentValue;
+})
+
+console.log(newSum) // it will print 26
+```
+In the following example, we show more built-in functions like *some()* and *every()*
+
+```javascript
+const words = ['unique', 'uncanny', 'pique', 'oxymoron', 'guise'];
+
+// Something is missing in the method call below
+
+console.log(words.some((word) => {
+  return word.length < 6;
+}));
+
+// Use filter to create a new array
+const interestingWords = words.filter(word =>{
+  return word.length > 5
+})
+
+// Make sure to uncomment the code below and fix the incorrect code before running it
+console.log(interestingWords.every((word) => {return word.length > 5 } ));
+```
 
 
 
