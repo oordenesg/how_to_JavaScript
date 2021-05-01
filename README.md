@@ -1075,8 +1075,21 @@ return `The final bill is: \n ${selectedAppetizer.name} \n ${selectedMain.name} 
 
 When we speak to other people, we normally ommit a lot details when we mention a simply task. For example, when we say "bake" we are actually thinking of a process. Within this process we have to put something into an over for a set amount of time and then remove it. The word "bake" allows us to abstract away a lot of the details. In programming we accomplish this by writing functions. However, in some cases, we need to create functions that accept other functions as arguments and/or return functions as output. This is what we called **High-Order Functions**. Using the example, “We hosted a birthday party” is an abstraction that may build on the abstraction “We made a cake.”
 
+In JS, functions are first class obecjts. This means that functions can have properties and methods. Since functions are a type of object, they have properies such as .length and .name and methods such as .toString(). In the following example, we've created one function with a long name. However we want to rename this function using a short name. What happend if we want to use the previous name (the long one)?. Well, as we mentioned previously, we can obtain that name since functions have properties like *.name*.
 
+```javascript
+const checkThatTwoPlusTwoEqualsFourAMillionTimes = () => { // functon with a long ganme
+  for(let i = 1; i <= 1000000; i++) {
+    if ( (2 + 2) != 4) {
+      console.log('Something has gone very wrong :( ');
+    }
+  }
+}
+const is2p2 = checkThatTwoPlusTwoEqualsFourAMillionTimes; // rename this function
+is2p2(); // call the function
+console.log(is2p2.name) //obtain the previous name
 
+```
 
 
 
