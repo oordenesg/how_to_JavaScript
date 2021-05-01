@@ -1012,6 +1012,65 @@ Imagine that we want to try out different restaurants. However, figure out what 
 9.  Inside menu, create a method called *.getRandomDishFromCourse()*. This method should take one parameter called *courseName*.
 10.  Inside the method *.getRandomDishFromCourse*, retrieve the array of the given course’s dishes from the menu‘s *_courses* object and store in a variable called dishes. Additionally, create a random index using length of the dishes array. Remember to use *Math.floor*. Then, return the dish located at that index in *dishes.*
 11.  Create a function called *.generateRandomMeal()*. This funcion will generate a three-course meals and it does not take any parameters. This function should create three variables *appetizer, main, dessert*. For each of them we just have to call the *.getRandomDishFromCourse()* method. Then, create a new variable with the total price and return a sentenc with the variables and the total price.
+12.  Now, we just have create a menu by adding some appetizers, mains and desserts. Try your program.
+
+```javascript
+const menu = {
+  _courses: {
+    appetizers: [],
+    mains: [],
+    desserts: []    
+  },
+
+  get appetizers(){ 
+    return this._courses.appetizers;
+  },
+  set appetizers(appetizerInput){ 
+   this._courses.appetizers = appetizerInput;
+  },
+  get mains(){ 
+    return this._courses.mains;
+  },
+  set mains(mainsInput){
+    this._courses.mains = mainsInput;
+   },
+  get desserts(){
+    return this._courses.desserts;
+   },
+  set desserts(dessertInput){
+    this._courses.desserts = dessertInput;
+   },
+
+  get courses(){
+    return {
+      appetizers: this.appetizers,
+      mains: this.mains,
+      desserts: this.desserts
+    }
+  },
+  addDishToCourse(courseName, dishName, dishPrice){
+    const dish = {
+          name: dishName,
+          price: dishPrice
+    };
+    this._courses[courseName].push(dish);
+  },
+  getRandomDishFromCourse(courseName){
+      let dishes = this._courses[courseName];
+      let index = Math.floor(Math.random() * dishes.length);
+      return dishes[index];
+  },
+generateRandomMeal(){
+ let selectedAppetizer = this.getRandomDishFromCourse('appetizers');
+ let selectedMain = this.getRandomDishFromCourse('mains');
+ let selectedDessert = this.getRandomDishFromCourse('desserts');
+
+const totalPrice = selectedAppetizer.price + selectedMain.price + selectedDessert.price;
+return `The final bill is: \n ${selectedAppetizer.name} \n ${selectedMain.name} \n ${selectedDessert.name} \n----------\n TOTAL = ${totalPrice}\n----------`;
+}
+};
+```
+
 
 
 
