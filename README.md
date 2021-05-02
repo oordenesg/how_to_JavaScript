@@ -1014,63 +1014,6 @@ Imagine that we want to try out different restaurants. However, figure out what 
 11.  Create a function called *.generateRandomMeal()*. This funcion will generate a three-course meals and it does not take any parameters. This function should create three variables *appetizer, main, dessert*. For each of them we just have to call the *.getRandomDishFromCourse()* method. Then, create a new variable with the total price and return a sentenc with the variables and the total price.
 12.  Now, we just have create a menu by adding some appetizers, mains and desserts. Try your program.
 
-```javascript
-const menu = {
-  _courses: {
-    appetizers: [],
-    mains: [],
-    desserts: []    
-  },
-
-  get appetizers(){ 
-    return this._courses.appetizers;
-  },
-  set appetizers(appetizerInput){ 
-   this._courses.appetizers = appetizerInput;
-  },
-  get mains(){ 
-    return this._courses.mains;
-  },
-  set mains(mainsInput){
-    this._courses.mains = mainsInput;
-   },
-  get desserts(){
-    return this._courses.desserts;
-   },
-  set desserts(dessertInput){
-    this._courses.desserts = dessertInput;
-   },
-
-  get courses(){
-    return {
-      appetizers: this.appetizers,
-      mains: this.mains,
-      desserts: this.desserts
-    }
-  },
-  addDishToCourse(courseName, dishName, dishPrice){
-    const dish = {
-          name: dishName,
-          price: dishPrice
-    };
-    this._courses[courseName].push(dish);
-  },
-  getRandomDishFromCourse(courseName){
-      let dishes = this._courses[courseName];
-      let index = Math.floor(Math.random() * dishes.length);
-      return dishes[index];
-  },
-generateRandomMeal(){
- let selectedAppetizer = this.getRandomDishFromCourse('appetizers');
- let selectedMain = this.getRandomDishFromCourse('mains');
- let selectedDessert = this.getRandomDishFromCourse('desserts');
-
-const totalPrice = selectedAppetizer.price + selectedMain.price + selectedDessert.price;
-return `The final bill is: \n ${selectedAppetizer.name} \n ${selectedMain.name} \n ${selectedDessert.name} \n----------\n TOTAL = ${totalPrice}\n----------`;
-}
-};
-```
-
 ## HIGHER-ORDER FUNCTIONS
 
 When we speak to other people, we normally ommit a lot details when we mention a simply task. For example, when we say "bake" we are actually thinking of a process. Within this process we have to put something into an over for a set amount of time and then remove it. The word "bake" allows us to abstract away a lot of the details. In programming we accomplish this by writing functions. However, in some cases, we need to create functions that accept other functions as arguments and/or return functions as output. This is what we called **High-Order Functions**. Using the example, “We hosted a birthday party” is an abstraction that may build on the abstraction “We made a cake.”
