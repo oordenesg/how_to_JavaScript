@@ -51,3 +51,29 @@ const acceptEverything = (array1) =>{
 };
 acceptEverything(veggies);
 
+//5. Write a function, squareNums(), that takes in an array of numbers and, using .map(), returns an array with the square of each of the elements of that array.
+
+const numbers = [2, 7, 9, 171, 52, 33, 14]
+const toSquare = num => num * num
+
+const squareNums = (input1)=>{
+  return input1.map(x => toSquare(x))
+}
+console.log(squareNums(numbers))
+
+//6. Write a function shoutGreetings() that takes in an array of strings and returns a new array. This new array should contain all the strings from the argument array but with capitalized letters and an exclamation point appended to the end: 'heya' will become 'HEYA!'
+const shoutGreetings = (array1) =>{
+  return array1.map(x => x.toUpperCase()+'!')
+}
+const greetings = ['hello', 'hi', 'heya', 'oi', 'hey', 'yo'];
+
+console.log(shoutGreetings(greetings)) // Should print [ 'HELLO!', 'HI!', 'HEYA!', 'OI!', 'HEY!', 'YO!' ]
+
+//7. Write a function sortYears() that takes in an array of years, and, using the built-in .sort() method, returns that array with the years sorted in descending order.
+
+const sortYears = (array) => {
+  return array.sort(function(a, b){return b-a})
+}
+const years = [1970, 1999, 1951, 1982, 1963, 2011, 2018, 1922]
+console.log(sortYears(years))
+
