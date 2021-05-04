@@ -86,3 +86,77 @@ const myStuff = [ 'rules', 'fruit-by-the-foot', 'wedgies', 'sweaters', 'skateboa
 
 console.log(justCoolStuff(myStuff, coolStuff))
 
+//9. Write a function isTheDinnerVegan() that takes in an array of food objects and returns a boolean value based on whether or not every item in the array has entirely plant-based origins.
+
+const isTheDinnerVegan = (input1)=>{
+  let source = [];
+  for(i=0;i<input1.length;i++){
+    source.push(input1[i]['source'])
+  };
+  return source.every(x => x=='plant')
+}
+
+const dinner = [{name: 'hamburger', source: 'meat'}, {name: 'cheese', source: 'dairy'}, {name: 'ketchup', source:'plant'}, {name: 'bun', source: 'plant'}, {name: 'dessert twinkies', source:'unknown'}];
+console.log(isTheDinnerVegan(dinner))// Should print false
+
+//10. Write a function sortSpeciesByTeeth() that takes in an array of species objects and sorts the array in ascending order based on the average number of teeth that species possesses (numTeeth) . You’ll need to access each object’s .numTeeth property. Feel free to either write a named comparison function, or use an anonymous function for your argument to .sort().
+
+const speciesArray = [ {speciesName:'shark', numTeeth:50}, {speciesName:'dog', numTeeth:42}, {speciesName:'alligator', numTeeth:80}, {speciesName:'human', numTeeth:32}];
+
+const sortSpeciesByTeeth = arr => arr.sort((speciesObj1, speciesObj2) => speciesObj1.numTeeth > speciesObj2.numTeeth)
+
+console.log(sortSpeciesByTeeth(speciesArray))
+
+//11. Write a function, findMyKeys(), that takes in an array of strings which may or may not contain 'keys'. If the keys are in the array, your function should return the index at which they can be found. If they’re not in the array, your function should return -1.
+
+onst findMyKeys = array => {
+  if(array.findIndex(x => x=='keys') != -1){
+    return array.findIndex(x => x=='keys')
+  } else{
+    return -1
+  }
+}
+const randomStuff = ['credit card', 'screwdriver', 'receipt', 'gum', 'keys', 'used gum', 'plastic spoon'];
+
+console.log(findMyKeys(randomStuff)) // Should print 4
+
+//12. Write a function, dogFactory(). It should: have 3 parameters: name, breed, and weight (in that order). Then add getters and setters for each of the three properties and change the property names to have an underscore prepended. Finally, add two methods to your object: .bark() which returns ‘ruff! ruff!’ and .eatTooManyTreats() which should increment the weight property by 1.
+
+const dogFactory = (name,breed,weight) =>{
+  return{
+    _name:name,
+    _breed:breed,
+    _weight:weight,
+    get name(){
+      return this._name
+    },
+    get breed(){
+      return this._breed
+    },
+    get weight(){
+      return this._weight
+    },
+    set name(nameInput){
+      this._name=nameInput
+    },
+    set breed(breedInput){
+      this._breed=breedInput
+    },
+    set weight(weightInput){
+      this._weight = weightInput
+    },
+    bark(){
+      return 'ruff! ruff!'
+    },
+    eatTooManyTreats(){
+      this._weight += 1
+    }
+  }
+}
+
+exampleObj = dogFactory('Joe', 'Pug', 27);
+console.log(exampleObj.bark())
+exampleObj.eatTooManyTreats()
+console.log(exampleObj)
+
+
