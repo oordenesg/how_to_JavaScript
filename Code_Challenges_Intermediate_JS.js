@@ -159,4 +159,15 @@ console.log(exampleObj.bark())
 exampleObj.eatTooManyTreats()
 console.log(exampleObj)
 
+//13. Write a function factorial() that takes a number as an argument and returns the factorial of the number. Example: factorial(6) returns 720
+
+const factorial = n => {
+  let result = 1;
+  for (let i=n; i>0; i--) {
+    result *= i;
+  }
+  return result;
+}
+
+factorial(6);
 
