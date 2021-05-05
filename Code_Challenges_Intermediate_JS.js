@@ -171,3 +171,12 @@ const factorial = n => {
 
 factorial(6);
 
+//14. Write a function subLength() that takes 2 parameters, a string and a single character. The function should search the string for the two occurrences of the character and return the length between them including the 2 characters. If there are less than 2 or more than 2 occurrences of the character the function should return 0.
+// Examples: subLength('Saturday', 'a'); // returns subLength('summer', 'm'); // returns 2
+
+
+
+//15. Write a function groceries() that takes an array of object literals of grocery items. The function should return a string with each item separated by a comma except the last two items should be separated by the word 'and'. Make sure spaces (' ') are inserted where they are appropriate.
+// groceries( [{item: 'Carrots'}, {item: 'Hummus'}, {item: 'Pesto'}, {item: 'Rigatoni'}] );returns 'Carrots, Hummus, Pesto and Rigatoni'
+//groceries( [{item: 'Bread'}, {item: 'Butter'}] ); returns 'Bread and Butter'
+//groceries( [{item: 'Cheese Balls'}] );returns 'Cheese Balls'
