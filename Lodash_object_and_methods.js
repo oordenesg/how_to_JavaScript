@@ -9,6 +9,7 @@ const _ = {
     var clampedValue = Math.min(lowerClampedValue,upper);
     return clampedValue
   },
+  //2. The next number method we will implement is .inRange() and its takes three arguments: a number, a start value, and an end value
   inRange(number,start,end){
     if (end === undefined){
       end = start
