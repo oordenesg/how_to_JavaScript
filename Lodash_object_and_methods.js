@@ -3,13 +3,13 @@
 // In this project, you will be implementing some of the most exciting functionality from the widely-popular lodash.js library which provides many methods that add new functionality for numbers, strings, objects, and arrays.
 
 //1.  we need to create an object to contain them. This object will represent our library containing all the functionality we add to it. Create a new variable called _ that is initialized to an empty object.
+//1.  we need to create an object to contain them. This object will represent our library containing all the functionality we add to it. Create a new variable called _ that is initialized to an empty object.
 const _ = {
   clamp(number,lower,upper){
     var lowerClampedValue = Math.max(number,lower);
     var clampedValue = Math.min(lowerClampedValue,upper);
     return clampedValue
   },
-  //2. The next number method we will implement is .inRange() and its takes three arguments: a number, a start value, and an end value
   inRange(number,start,end){
     if (end === undefined){
       end = start
@@ -62,10 +62,30 @@ const _ = {
       return undefined
 
     },
-    drop(array,number){
-      if(number === undefined){
-        return 1
-      } let new_array = array.slice(0,number);
+    drop(array,n){
+      if(n === undefined){
+        n = 1
+      } 
+      let droppedArray = array.slice(n,array.length);
+      return droppedArray
+    },
+    dropWhile(array,predicate){
+      const cb = (element,index) =>{
+        return !predicate(element,index,array)
+      };    
+      let dropNumber = array.findIndex(cb)
+      let droppedArray = this.drop(array,dropNumber)
+      return droppedArray
+    },
+    chunk(array,size){
+      if(size === undefined){
+        size = 1
+      }
+      let new_array = [];
+      for(let i = 0;i < array.length;i += size){
+        let new_array = array.slice(i, i + size);
+        new_array.push(new_array);
+      }
       return new_array
     }
 }
