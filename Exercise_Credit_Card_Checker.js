@@ -93,4 +93,36 @@ const findInvalidCards = (nestedArray) =>{
   return invalidCards
 }
 
-//3.
+//3. After finding all the invalid credit card numbers, it’s also necessary to identify the credit card companies that have possibly issued these faulty numbers. Create a function, idInvalidCardCompanies() that has one parameter for a nested array of invalid numbers and returns an array of companies.
+// Currently, there 4 accepted companies which each have unique first digits. The following table shows which digit is unique to which company:
+// 3 - Visa; 4 - American Express; 5 - Mastercard; 6 - Discover
+
+const idInvalidCardCompanies = (nested_array)=>{
+  let companies = [];
+  var invalid_cards = findInvalidCards(nested_array);
+  for(i = 0; i<invalid_cards.length;i++){
+    if(companies.includes(invalid_cards[i][0])===false){
+      companies.push(invalid_cards[i][0])
+    }
+  }
+  if(companies.length === 0){
+    return 'Company not found'
+  } else{
+    for(i = 0; i <companies.length;i++){
+      if(companies[i]===3){
+        companies[i] = 'Visa'
+        }else if(companies[i]===4){
+          companies[i] = 'Amex (American Express)'
+        }else if(companies[i]===5){
+            companies[i] = 'Mastercard'
+        }else if(companies[i]===6){
+            companies[i] = 'Discover'
+            }
+          }
+      }
+    return companies
+}
+
+console.log(idInvalidCardCompanies(batch))
+
+
